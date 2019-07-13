@@ -1,9 +1,31 @@
-@mixin sprite_profile($x) {
-  background-position: (($x) * (-71px)) 0px;
-}
-@mixin sprite_soc($x) {
+@mixin sptite-manual($x,$y){
   background: url("./img/Sprite.png");
-  background-position: (($x) * (-110px)) -92px;
+  background-position: (($x) * (-1px)) (($y) * (-1px));
+}
+@mixin sprite-social($x) {
+  background: url("./img/Sprite.png");
+  background-position: (($x) * (-30px)) -68px;
+}
+@mixin sprite-estimate_big($x) {
+  background: url("./img/Sprite.png");
+  background-position: (($x) * (-70px)) -198px;
   height: 70px;
-  width: 110px;
+  width: 70px;
+}
+@mixin sprite-estimate_little($x) {
+  background: url("./img/Sprite.png");
+  background-position: (($x) * (-70px)) -337px;
+  height: 50px;
+  width: 50px;
+}
+
+@mixin text-style($font-weight, $font-size, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size + (px);
+  line-height: $line-height + (px);
+  margin: 0px; 
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 }

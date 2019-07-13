@@ -1,1 +1,32 @@
- 
+.navigation {
+  display: flex;
+  align-items: center;
+  &__link {
+    @include text-style(300, 13, 18);
+    color: $gray;
+    text-transform: uppercase;
+    font-family: $font-Open-Sans;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 11, 15);
+    }
+    &:nth-child(2) {
+      margin-left: 30px;
+      @media (max-width: $desktop) {
+        margin-left: 20px;
+      }
+    }
+    &:nth-child(3) {
+      margin-left: 30px;
+      @media (max-width: $desktop) {
+        margin-left: 20px;
+      }
+    }
+    &:nth-child(4) {
+      margin-left: 30px;
+      @media (max-width: $desktop) {
+        margin-left: 20px;
+      }
+    }
+  }
+}

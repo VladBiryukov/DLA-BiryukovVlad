@@ -1,1 +1,19 @@
- 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  cursor: pointer;
+  width: 26px;
+  height: 18px;
+  @media (max-width: $desktop) {
+    display: flex;
+  }
+
+  &__line {
+    height: 2px;
+    width: 100%;
+    background: $blue;
+    border-radius: 100px;
+  }
+}

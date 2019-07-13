@@ -1,1 +1,45 @@
+.header { 
+  &__block {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;  
+    @media (max-width: $desktop){
+      align-items: center;
+      margin-top: 30px;
+    }
+    @media (max-width: $mobile){
+      margin-top: 15px;
+    }
+  } 
  
+  &__logo {
+    @include sptite-manual(0, 1);
+    width: 225px;
+    height: 66px;
+    @media (max-width: $desktop){
+      transform: scale(0.711)
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 7px;
+    width: 74.5%;
+    @media (max-width: $desktop){
+      display: none;
+    }
+  }
+  &__phone {
+    @include text-style(700, 16, 22);
+    margin-right: 30px;
+    color: $gray;
+    
+  }
+  &__button {
+    @include text-style(700, 13, 18);
+    color: $gray;
+    background: $orange; 
+  }
+}
