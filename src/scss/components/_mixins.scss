@@ -1,0 +1,9 @@
+@mixin sprite_profile($x) {
+  background-position: (($x) * (-71px)) 0px;
+}
+@mixin sprite_soc($x) {
+  background: url("./img/Sprite.png");
+  background-position: (($x) * (-110px)) -92px;
+  height: 70px;
+  width: 110px;
+}

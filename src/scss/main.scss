@@ -1,0 +1,14 @@
+//Импорт общих стилей
+@import "./components/common";
+@import "./components/mixins";
+//Импорт шрифтов
+@import "./components/fonts";
+
+//Импорт стилей страниц
+@import "./pages/index";
+
+//Импорт компонентов для страниц hamburger
+@import "./components/_navigation";
+@import "./components/_hamburger";
+@import "./components/header";
+@import "./components/footer";
