@@ -4,42 +4,42 @@ $font-Montserrat: "Montserrat";
 $gray: #3a4959;
 $blue: #056cde;
 $orange: #ffce51;
-
+$white: #FFFFFF;
 //  background-color
-$light-blue: #e5e5e5; 
+ 
+$site_bg:#f5fafe; 
 
 //media watch points
 $desktop: 1400px;
 $tablet: 768px;
 $mobile: 768px;
-
+ 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 110px;
+  //overflow: hidden;
+   
   @media (max-width: $desktop) {
     padding: 0 35px;
   }
   @media (max-width: $tablet) {
-    padding: 0 20px;
+    padding: 0 20px; 
   }
 }
 .button {
   text-transform: uppercase; 
   display: inline-block;
   user-select: none;
+  white-space: nowrap;
+  text-align: center;
   border-radius: 10px;
   padding: 12px 24px; 
 }
-.date {
-  font-size: 20px;
-  line-height: 27px;
-  @media (max-width: $tablet) {
-    font-size: 18px;
-    line-height: 25px;
-  }
-  @media (max-width: $mobile) {
-    font-size: 16px;
-    line-height: 22px;
-  }
+.blot-bg{ 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
 }
+ 

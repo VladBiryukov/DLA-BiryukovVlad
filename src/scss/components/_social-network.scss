@@ -1,0 +1,21 @@
+.social-network {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  &__icon {
+    height: 30px;
+    width: 30px;
+    &:nth-child(1) {
+      @include sprite-social(0);
+    }
+    &:nth-child(2) {
+      @include sprite-social(1);
+    }
+    &:nth-child(3) {
+      @include sprite-social(2);
+    }
+    &:nth-child(4) {
+      @include sprite-social(3);
+    }
+  }
+}

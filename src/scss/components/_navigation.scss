@@ -2,13 +2,15 @@
   display: flex;
   align-items: center;
   &__link {
-    @include text-style(300, 13, 18);
+    @include text-style_pro(300, 13, 18, os);
     color: $gray;
     text-transform: uppercase;
-    font-family: $font-Open-Sans;
 
     @media (max-width: $desktop) {
       @include text-style(300, 11, 15);
+    }
+    &:hover {
+      color: $gray;
     }
     &:nth-child(2) {
       margin-left: 30px;

@@ -1,45 +1,61 @@
-.header { 
-  &__block {
-    margin-top: 40px;
+.header {
+  background: $site_bg;
+
+  &__block { 
+    padding-top: 40px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;  
-    @media (max-width: $desktop){
+    justify-content: space-between;
+    @media (max-width: $desktop) {
       align-items: center;
-      margin-top: 30px;
+      padding-top: 30px;
     }
-    @media (max-width: $mobile){
-      margin-top: 15px;
+    @media (max-width: $mobile) {
+      //  position: absolute; // для того что бы позвоночник заполс под header и не обрезался
+      padding-top: 15px;
     }
-  } 
- 
+  }
   &__logo {
     @include sptite-manual(0, 1);
+    z-index: 2;
     width: 225px;
     height: 66px;
-    @media (max-width: $desktop){
-      transform: scale(0.711)
+    @media (max-width: $desktop) {
+      background-size: 212px 367px;
+      width: 160px;
+      height: 47px;
+    }
+    @media (max-width: $mobile) {
+      background-size: 178px 303px;
+      background-position-y: 0;
+      width: 132px;
+      height: 40px;
     }
   }
 
   &__navigation {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     padding-top: 7px;
     width: 74.5%;
-    @media (max-width: $desktop){
+    @media (max-width: $desktop) {
       display: none;
     }
   }
   &__phone {
-    @include text-style(700, 16, 22);
+    @include text-style_pro(700, 16, 22, os);
     margin-right: 30px;
     color: $gray;
-    
+    &:hover {
+      color: $gray;
+    }
   }
   &__button {
-    @include text-style(700, 13, 18);
+    @include text-style_pro(700, 13, 18, os);
     color: $gray;
-    background: $orange; 
+    background: $orange;
+    &:hover {
+      color: $gray;
+    }
   }
 }

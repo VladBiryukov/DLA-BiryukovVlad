@@ -1,31 +1,62 @@
-@mixin sptite-manual($x,$y){
+//спрайты
+@mixin sptite-manual($x, $y) {
   background: url("./img/Sprite.png");
+  background-repeat: no-repeat;
   background-position: (($x) * (-1px)) (($y) * (-1px));
 }
 @mixin sprite-social($x) {
   background: url("./img/Sprite.png");
+  background-repeat: no-repeat;
   background-position: (($x) * (-30px)) -68px;
 }
 @mixin sprite-estimate_big($x) {
   background: url("./img/Sprite.png");
+  background-repeat: no-repeat;
   background-position: (($x) * (-70px)) -198px;
   height: 70px;
   width: 70px;
 }
 @mixin sprite-estimate_little($x) {
   background: url("./img/Sprite.png");
+  background-repeat: no-repeat;
   background-position: (($x) * (-70px)) -337px;
   height: 50px;
   width: 50px;
 }
-
+// стили для текста
 @mixin text-style($font-weight, $font-size, $line-height) {
   font-weight: $font-weight;
   font-size: $font-size + (px);
   line-height: $line-height + (px);
-  margin: 0px; 
+
   &:hover {
     text-decoration: none;
-    color: inherit;
+  }
+}
+@mixin text-style_pro($font-weight, $font-size, $line-height, $ff) {
+  font-weight: $font-weight;
+  font-size: $font-size + (px);
+  line-height: $line-height + (px);
+  margin: 0px;
+  &:hover {
+    text-decoration: none;
+  }
+  @if $ff==m {
+    font-family: $font-Montserrat;
+  } @else if $ff==os {
+    font-family: $font-Open-Sans;
+  }
+}
+
+@mixin line($width, $height) {
+  height: $height + (px);
+  width: $width + (px);
+  background-color: $blue;
+  content: "";
+  border-radius: 10px;
+  position: absolute;
+  @media (max-width: $desktop) {
+    height: 3px;
+    width: 80px;
   }
 }

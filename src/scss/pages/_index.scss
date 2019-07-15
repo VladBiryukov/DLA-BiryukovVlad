@@ -1,6 +1,470 @@
 .call-to-action {
+  background: $site_bg;
+  &__block {
+    padding: 37px 0 30px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+.card-family-chiropractic {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  margin-top: 78px;
+  position: relative;
+  @media (max-width: $desktop) {
+    margin-top: 28px;
+  }
+  @media (max-width: $tablet) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  &::before {
+    @include line(110, 5);
+    top: -40px;
+    @media (max-width: $desktop) {
+      top: -22px;
+    }
+    @media (max-width: $tablet) {
+    }
+  }
+  &__title {
+    @include text-style_pro(600, 58, 67, m);
+    letter-spacing: 1px;
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(600, 28, 32);
+    }
+  }
+  &__text {
+    @include text-style_pro(300, 18, 29, os);
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(300, 15, 25);
+    }
+  }
+  &__desc {
+    margin-top: 30px;
+    @media (max-width: $desktop) {
+      margin-top: 20px;
+    }
+  }
+  &__button {
+    @include text-style_pro(600, 16, 22, m);
+    margin-top: 35px;
+    padding: 15px 71px;
+    color: $white;
+    background-color: $blue;
+    margin-top: 30px;
+    @media (max-width: $desktop) {
+      @include text-style(600, 13, 18);
+      margin-top: 25px;
+      padding: 12px 50px;
+    }
+    @media (max-width: $tablet) {
+      display: block;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.spine {
+  position: relative;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  margin-top: 20px;
+  /* height: 560px; */
+  z-index: 0;
+
+  @media (max-width: $desktop) {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    /* height: 395px; */
+  }
+  @media (max-width: $tablet) {
+    position: absolute;
+    overflow: hidden;
+    width: 58%;
+    height: 220px;
+    right: 0px;
+    top: -23px;
+  }
+  &-oval-bg {
+    background: url("./img/bg-spine.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 504px;
+    @media (max-width: $desktop) {
+      width: 330px;
+      height: 297px;
+    }
+    @media (max-width: $tablet) {
+      width: 244px;
+      height: 220px;
+    }
+  }
+  &-img {
+    background: url("./img/spine.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 296px;
+    height: 567px;
+    position: absolute;
+    top: -21px;
+    left: 95px;
+    @media (max-width: $desktop) {
+      width: 228px;
+      height: 333px;
+      left: 30px;
+    }
+    @media (max-width: $tablet) {
+      left: 60px;
+      top: 35px;
+      width: 87px;
+      height: 145px;
+    }
+  }
+  &-shadow {
+    position: absolute;
+    left: 170px;
+    bottom: -105px;
+    width: 226px;
+    height: 10px;
+    background: radial-gradient(15.5px at 50% 50%, rgba(8, 11, 175, 0.308) 0%, rgba(52, 9, 153, 0.281) 100%);
+    opacity: 0.1;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.87);
+
+    @media (max-width: $desktop) {
+      width: 133px;
+      left: 100px;
+      bottom: 40px;
+    }
+    @media (max-width: $mobile) {
+      height: 7px;
+      width: 53px;
+      left: 93px;
+      bottom: 23px;
+    }
+  }
+}
+.social-network__wrap {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  margin-top: 33px;
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.comprehensive-treatment {
+  background: $site_bg;
+  &__blot-bg {
+    width: 590px;
+    left: 0;
+    height: 1226px;
+    background: url("./img/blot-comprehensive-treatment.png");
+    z-index: 0;
+    background-repeat: no-repeat;
+    @media (max-width: $desktop) {
+      top: 480px;
+      background-size: 300px 900px;
+    }
+  }
   &__block {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__img {
+    background: url("./img/comprehensive-treatment.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-top: 100px;
+    height: 440px;
+    width: 540px;
+    z-index: 2;
+    @media (max-width: $desktop) {
+      margin-top: 83px;
+      width: 320px;
+      height: 260px;
+    }
+  }
+}
+
+.card-comprehensive-treatment {
+  position: relative;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  margin-top: 220px;
+  z-index: 2;
+  @media (max-width: $desktop) {
+    margin-top: 146px;
+  }
+  &::before {
+    @include line(110, 5);
+    top: -40px;
+    @media (max-width: $desktop) {
+      top: -22px;
+    }
+    @media (max-width: $tablet) {
+    }
+  }
+  &__title {
+    @include text-style_pro(600, 38, 44, m);
+    color: $gray;
+    letter-spacing: 1px;
+    @media (max-width: $desktop) {
+      @include text-style(600, 22, 28);
+    }
+  }
+  &__text {
+    @include text-style_pro(300, 18, 29, os);
+    color: $gray;
+    line-height: 30px;
+    @media (max-width: $desktop) {
+      @include text-style(300, 15, 25);
+    }
+  }
+  &__desc {
+    margin-top: 15px;
+  }
+  &__button {
+    @include text-style_pro(600, 13, 18, m);
+    color: $gray;
+    margin-top: 30px;
+    background: $orange;
+    padding: 12px 60px;
+
+    @media (max-width: $desktop) {
+      @include text-style(600, 13, 18);
+      margin-top: 29px;
+      padding: 11px 58px;
+    }
+
+    &:hover {
+      color: $gray;
+    }
+  }
+}
+
+.services {
+  background: $site_bg;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    padding: 135px 0 0 0;
+
+    @media (max-width: $desktop) {
+      padding: 98px 0 0 0;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__title {
+    z-index: 2;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    @include text-style_pro(600, 38, 44, m);
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(600, 22, 25);
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+    }
+    &::before {
+      @include line(110, 5);
+      bottom: 75px;
+      @media (max-width: $desktop) {
+        bottom: 45px;
+      }
+    }
+  }
+  &__blot-bg {
+    width: 590px;
+    right: 0;
+    top: 2100px;
+    height: 1226px;
+    background: url("./img/blot-services.png");
+    z-index: 0;
+    background-repeat: no-repeat;
+    @media (max-width: $desktop) {
+      right: 0;
+      width: 300px;
+      top: 1535px;
+      background-size: 400px 900px;
+    }
+    @media (max-width: $tablet){
+      display: none;
+    }
+  }
+}
+.card-services {
+  z-index: 2;
+  border-radius: 10px;
+  background: $white;
+  grid-column-start: 2;
+  grid-column-end: 7;
+  background: $white;
+  max-width: 450px;
+  @media (max-width: $mobile) {
+    max-width: 100%;
+  }
+  &_chiropractic {
+    margin-top: 20px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    max-height: 470px; // я пока что не смог сделать так что бы блок chiropractic автоматически не растягивался при позиционировании блока acupuncture гридом по вертикале.  не стал особо заворачиваться на этом моменте в силу того что конкретно эти гриды в компании не юзаются, позже попробую найти решение даной задачи,пока сделал костылём
+
+    @media (max-width: $desktop) {
+      max-height: 403px;
+      margin-top: 10px;
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &_acupuncture {
+    margin-top: 175px;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    @media (max-width: $desktop) {
+      margin-top: 168px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &_massage {
+    margin-top: -131px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    @media (max-width: $desktop) {
+      margin-top: -87px;
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      margin-top: 0px;
+    }
+  }
+
+  &__info {
+    padding: 35px 70px 39px 40px;
+    @media (max-width: $desktop) {
+      padding: 20px 20px 30px 20px;
+    }
+    @media (max-width: $mobile) {
+      padding: 13px 48px 16px 20px;
+    }
+    &_acupuncture {
+      padding: 35px 70px 65px 40px;
+      @media (max-width: $desktop) {
+        padding: 20px 20px 15px 20px;
+      }
+    }
+    &_massage {
+      @media (max-width: $desktop) {
+        padding: 20px 20px 15px 20px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__title {
+    @include text-style_pro(600, 24, 28, m);
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(600, 18, 21);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  &__desc {
+    padding-top: 8px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include text-style_pro(300, 16, 24, os);
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 14, 21);
+    }
+  }
+  &__link {
+    @include text-style_pro(300, 13, 18, os);
+    color: $blue;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-right: 10px;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 11, 15);
+      padding-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+    &:hover {
+      color: $blue;
+    }
+    &_desktop {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &_mobile {
+      display: none;
+      text-transform: none;
+      @media (max-width: $mobile) {
+        @include text-style(600, 18, 21);
+        display: inline-block;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
   }
 }

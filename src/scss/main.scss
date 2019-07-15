@@ -4,11 +4,12 @@
 //Импорт шрифтов
 @import "./components/fonts";
 
-//Импорт стилей страниц
+//Импорт стилей страниц social-network
 @import "./pages/index";
 
 //Импорт компонентов для страниц hamburger
-@import "./components/_navigation";
-@import "./components/_hamburger";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/_navigation";
+@import "./components/_social-network";
+@import "./components/_hamburger";
