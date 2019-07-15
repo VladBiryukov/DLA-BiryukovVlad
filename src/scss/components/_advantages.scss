@@ -1,0 +1,223 @@
+.advantages {
+    background: $site_bg;
+    &__block {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 20px;
+      padding: 123px 0 20px 0;
+      @media (max-width: $desktop) {
+        padding: 102px 0 20px 0;
+      }
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    &__info {
+      grid-column-start: 2;
+      grid-column-end: 8;
+      position: relative;
+      @media (max-width: $desktop) {
+        grid-column-start: 2;
+        grid-column-end: 10;
+      }
+      @media (max-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      &::before {
+        @include line(110, 5);
+        top: -35px;
+        @media (max-width: $desktop) {
+          top: -24px;
+        }
+      }
+    }
+    &__title {
+      @include text-style_pro(600, 38, 44, m);
+      color: $gray;
+      letter-spacing: 1px;
+  
+      @media (max-width: $desktop) {
+        @include text-style(600, 22, 25);
+        letter-spacing: 0.1;
+      }
+    }
+    &__text {
+      @include text-style_pro(300, 18, 29, os);
+      padding-top: 20px;
+      @media (max-width: $desktop) {
+        @include text-style(300, 15, 25);
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+   // я не стал выносить стили карточки в отдельный scss файл что бы избежать сильного дробления кода по папкам
+  .card-advantages {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    z-index: 2;
+    @media (max-width: $desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 270px;
+    }
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      flex-direction: row;
+    }
+    //позиционирование карточек
+    &_practice {
+      //карточка
+      margin-top: 20px;
+      grid-column-start: 2;
+      grid-column-end: 7;
+      @media (max-width: $desktop) {
+        margin-top: -10px;
+      }
+      @media (max-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        margin-top: 10px;
+      }
+    }
+    &_spanish-doctor {
+      //карточка
+      margin-top: 20px;
+      grid-column-start: 7;
+      grid-column-end: 12;
+      @media (max-width: $desktop) {
+        margin-top: -10px;
+      }
+      @media (max-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+    }
+    &_experience {
+      //карточка
+      margin-top: 30px;
+      grid-column-start: 2;
+      grid-column-end: 7;
+      @media (max-width: $desktop) {
+        margin-top: -10px;
+      }
+      @media (max-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+    }
+    &_insurance {
+      //карточка
+      margin-top: 30px;
+      grid-column-start: 7;
+      grid-column-end: 12;
+      @media (max-width: $desktop) {
+        margin-top: -10px;
+      }
+      @media (max-width: $tablet) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+    }
+  
+    &__box-logo {
+      //бокс с лого
+      position: relative;
+      width: 35px;
+      z-index: 2;
+      @media (max-width: $desktop) {
+        left: 20px;
+        top: 20px;
+      }
+      @media (max-width: $tablet) {
+        /*   width: 0;
+        top: 0px;
+        left: 0px; */
+        position: static;
+      }
+    }
+    &__logo {
+      // логотип
+      width: 70px;
+      height: 70px;
+      @media (max-width: $desktop) {
+        width: 50px;
+        height: 50px;
+      } // логотип
+      &_practice {
+        @include sprite-estimate_big(0);
+        @media (max-width: $desktop) {
+          @include sprite-estimate_little(0);
+        }
+      } // логотип
+      &_spanish-doctor {
+        @include sprite-estimate_big(1);
+        @media (max-width: $desktop) {
+          @include sprite-estimate_little(1);
+        }
+      } // логотип
+      &_experience {
+        @include sprite-estimate_big(2);
+        @media (max-width: $desktop) {
+          @include sprite-estimate_little(2);
+        }
+      } // логотип
+      &_insurance {
+        @include sprite-estimate_big(3);
+        @media (max-width: $desktop) {
+          @include sprite-estimate_little(3);
+        }
+      }
+    }
+  
+    &__desc {
+      // вся текстовая информация
+      background: $white;
+      padding: 34px 40px 36px 60px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+      @media (max-width: $desktop) {
+        padding: 37px 40px 46px 20px;
+      }
+      @media (max-width: $tablet) {
+        padding: 0px 0px 0px 40px;
+        width: 100%;
+        background: $site-bg;
+        box-shadow: none;
+      }
+      &_spanish-doctor {
+        padding: 35px 40px 12px 60px; //надеюсь есть поумнее способ выставить всё по размеру
+        @media (max-width: $desktop) {
+          padding: 37px 40px 25px 20px;
+        }
+        @media (max-width: $tablet) {
+          padding: 0px 0px 0px 40px;
+          background: $site-bg;
+        }
+      }
+    }
+  
+    &__title {
+      @include text-style_pro(600, 18, 21, m);
+      color: $gray;
+      @media (max-width: $desktop) {
+        @include text-style(600, 14, 17);
+        grid-column-start: 2;
+      }
+    }
+    &__text {
+      @include text-style_pro(300, 16, 24, os);
+      padding-top: 7px;
+      color: $gray;
+      @media (max-width: $desktop) {
+        @include text-style(300, 14, 21);
+      }
+      @media (max-width: $tablet) {
+        padding-top: 5px;
+      }
+    }
+  }
+  

@@ -12,16 +12,14 @@
 @mixin sprite-estimate_big($x) {
   background: url("./img/Sprite.png");
   background-repeat: no-repeat;
-  background-position: (($x) * (-70px)) -198px;
-  height: 70px;
-  width: 70px;
+  background-position: (($x) * (-72px)) -197px;
+ 
 }
 @mixin sprite-estimate_little($x) {
   background: url("./img/Sprite.png");
   background-repeat: no-repeat;
-  background-position: (($x) * (-70px)) -337px;
-  height: 50px;
-  width: 50px;
+  background-position: (($x) * (-52px)) -379px;
+ 
 }
 // стили для текста
 @mixin text-style($font-weight, $font-size, $line-height) {

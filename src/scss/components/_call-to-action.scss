@@ -1,0 +1,165 @@
+.call-to-action {
+  background: $site_bg;
+  &__block {
+    padding: 37px 0 30px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+.card-family-chiropractic {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  margin-top: 78px;
+  position: relative;
+  @media (max-width: $desktop) {
+    margin-top: 28px;
+  }
+  @media (max-width: $tablet) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  &::before {
+    @include line(110, 5);
+    top: -40px;
+    @media (max-width: $desktop) {
+      top: -22px;
+    }
+    @media (max-width: $tablet) {
+    }
+  }
+  &__title {
+    @include text-style_pro(600, 58, 67, m);
+    letter-spacing: 1px;
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(600, 28, 32);
+    }
+  }
+  &__text {
+    @include text-style_pro(300, 18, 29, os);
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(300, 15, 25);
+    }
+  }
+  &__desc {
+    margin-top: 30px;
+    @media (max-width: $desktop) {
+      margin-top: 20px;
+    }
+  }
+  &__button {
+    @include text-style_pro(600, 16, 22, m);
+    margin-top: 35px;
+    padding: 15px 71px;
+    color: $white;
+    background-color: $blue;
+    margin-top: 30px;
+    @media (max-width: $desktop) {
+      @include text-style(600, 13, 18);
+      margin-top: 25px;
+      padding: 12px 50px;
+    }
+    @media (max-width: $tablet) {
+      display: block;
+    }
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.spine {
+  position: relative;
+  grid-column-start: 7;
+  grid-column-end: 13;
+  margin-top: 20px;
+  /* height: 560px; */
+  z-index: 0;
+
+  @media (max-width: $desktop) {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    /* height: 395px; */
+  }
+  @media (max-width: $tablet) {
+    position: absolute;
+    overflow: hidden;
+    width: 58%;
+    height: 220px;
+    right: 0px;
+    top: -23px;
+  }
+  &-oval-bg {
+    background: url("./img/bg-spine.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 504px;
+    @media (max-width: $desktop) {
+      width: 330px;
+      height: 297px;
+    }
+    @media (max-width: $tablet) {
+      width: 244px;
+      height: 220px;
+    }
+  }
+  &-img {
+    background: url("./img/spine.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 296px;
+    height: 567px;
+    position: absolute;
+    top: -21px;
+    left: 95px;
+    @media (max-width: $desktop) {
+      width: 228px;
+      height: 333px;
+      left: 30px;
+    }
+    @media (max-width: $tablet) {
+      left: 60px;
+      top: 35px;
+      width: 87px;
+      height: 145px;
+    }
+  }
+  &-shadow {
+    position: absolute;
+    left: 170px;
+    bottom: -105px;
+    width: 226px;
+    height: 10px;
+    background: radial-gradient(15.5px at 50% 50%, rgba(8, 11, 175, 0.308) 0%, rgba(52, 9, 153, 0.281) 100%);
+    opacity: 0.1;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.87);
+
+    @media (max-width: $desktop) {
+      width: 133px;
+      left: 100px;
+      bottom: 40px;
+    }
+    @media (max-width: $mobile) {
+      height: 7px;
+      width: 53px;
+      left: 93px;
+      bottom: 23px;
+    }
+  }
+}
+.social-network__wrap {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  margin-top: 33px;
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}

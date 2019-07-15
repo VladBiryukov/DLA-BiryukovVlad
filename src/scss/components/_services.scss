@@ -1,0 +1,208 @@
+.services {
+  background: $site_bg;
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    padding: 135px 0 0 0;
+
+    @media (max-width: $desktop) {
+      padding: 98px 0 0 0;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__title {
+    z-index: 2;
+    position: relative;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    @include text-style_pro(600, 38, 44, m);
+    color: $gray;
+    @media (max-width: $desktop) {
+      @include text-style(600, 22, 25);
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+    }
+    &::before {
+      @include line(110, 5);
+      bottom: 75px;
+      @media (max-width: $desktop) {
+        bottom: 45px;
+      }
+    }
+  }
+  &__blot-bg {
+    width: 590px;
+    right: 0;
+    top: 2100px;
+    height: 1265px;
+    background: url("./img/blot-services.png");
+    z-index: 0;
+    background-repeat: no-repeat;
+    @media (max-width: $desktop) {
+      right: 0;
+      width: 300px;
+      height: 910px;
+      top: 1535px;
+      background-size: 400px 900px;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+.card-services {
+  z-index: 2;
+  border-radius: 10px;
+  background: $white;
+  grid-column-start: 2;
+  grid-column-end: 7;
+  background: $white;
+  box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+  max-width: 450px;
+  @media (max-width: $mobile) {
+    max-width: 100%;
+  }
+  &_chiropractic {
+    margin-top: 20px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    max-height: 470px; // я пока что не смог сделать так что бы блок chiropractic автоматически не растягивался при позиционировании блока acupuncture гридом по вертикале.  не стал особо заворачиваться на этом моменте в силу того что конкретно эти гриды в компании не юзаются, позже попробую найти решение даной задачи,пока сделал костылём
+
+    @media (max-width: $desktop) {
+      max-height: 403px;
+      margin-top: 10px;
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &_acupuncture {
+    margin-top: 175px;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    @media (max-width: $desktop) {
+      margin-top: 168px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 0px;
+      grid-column-start: 1;
+      grid-column-end: 5;
+    }
+  }
+  &_massage {
+    margin-top: -131px;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    @media (max-width: $desktop) {
+      margin-top: -87px;
+    }
+    @media (max-width: $mobile) {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      margin-top: 0px;
+    }
+  }
+
+  &__info {
+    padding: 35px 70px 39px 40px;
+    @media (max-width: $desktop) {
+      padding: 20px 20px 30px 20px;
+    }
+    @media (max-width: $mobile) {
+      padding: 13px 48px 16px 20px;
+    }
+    &_acupuncture {
+      padding: 35px 70px 65px 40px;
+      @media (max-width: $desktop) {
+        padding: 20px 20px 15px 20px;
+      }
+    }
+    &_massage {
+      @media (max-width: $desktop) {
+        padding: 20px 20px 15px 20px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__title {
+    @include text-style_pro(600, 24, 28, m);
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(600, 18, 21);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  &__desc {
+    padding-top: 8px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__text {
+    @include text-style_pro(300, 16, 24, os);
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 14, 21);
+    }
+  }
+  &__link {
+    @include text-style_pro(300, 13, 18, os);
+    color: $blue;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    margin-right: 10px;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 11, 15);
+      padding-bottom: 15px;
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+    &:hover {
+      color: $blue;
+    }
+    &_desktop {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &_mobile {
+      display: none;
+      text-transform: none;
+      @media (max-width: $mobile) {
+        @include text-style(600, 18, 21);
+        display: inline-block;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+}
