@@ -13,13 +13,11 @@
   background: url("./img/Sprite.png");
   background-repeat: no-repeat;
   background-position: (($x) * (-72px)) -197px;
- 
 }
 @mixin sprite-estimate_little($x) {
   background: url("./img/Sprite.png");
   background-repeat: no-repeat;
   background-position: (($x) * (-52px)) -379px;
- 
 }
 // стили для текста
 @mixin text-style($font-weight, $font-size, $line-height) {
@@ -31,7 +29,7 @@
     text-decoration: none;
   }
 }
-@mixin text-style_pro($font-weight, $font-size, $line-height, $ff) {
+@mixin text-style_pro($font-weight, $font-size, $line-height, $font-family) {
   font-weight: $font-weight;
   font-size: $font-size + (px);
   line-height: $line-height + (px);
@@ -39,9 +37,9 @@
   &:hover {
     text-decoration: none;
   }
-  @if $ff==m {
+  @if $font-family==m {
     font-family: $font-Montserrat;
-  } @else if $ff==os {
+  } @else if $font-family==os {
     font-family: $font-Open-Sans;
   }
 }

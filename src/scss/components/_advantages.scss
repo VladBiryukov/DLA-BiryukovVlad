@@ -58,19 +58,20 @@
     display: flex;
     align-items: center;
     max-width: 450px;
+     
     z-index: 2;
     @media (max-width: $desktop) {
       flex-direction: column;
       align-items: flex-start;
-      width: 270px;
+      //max-width: 270px;
     }
     @media (max-width: $tablet) {
       max-width: 100%;
       flex-direction: row;
     }
     //позиционирование карточек
+    //карточка
     &_practice {
-      //карточка
       margin-top: 20px;
       grid-column-start: 2;
       grid-column-end: 7;
@@ -83,8 +84,8 @@
         margin-top: 10px;
       }
     }
+    //карточка
     &_spanish-doctor {
-      //карточка
       margin-top: 20px;
       grid-column-start: 7;
       grid-column-end: 12;
@@ -96,8 +97,8 @@
         grid-column-end: 5;
       }
     }
+    //карточка
     &_experience {
-      //карточка
       margin-top: 30px;
       grid-column-start: 2;
       grid-column-end: 7;
@@ -109,8 +110,8 @@
         grid-column-end: 5;
       }
     }
+    //карточка
     &_insurance {
-      //карточка
       margin-top: 30px;
       grid-column-start: 7;
       grid-column-end: 12;
@@ -123,8 +124,8 @@
       }
     }
   
+    //бокс с лого
     &__box-logo {
-      //бокс с лого
       position: relative;
       width: 35px;
       z-index: 2;
@@ -132,10 +133,7 @@
         left: 20px;
         top: 20px;
       }
-      @media (max-width: $tablet) {
-        /*   width: 0;
-        top: 0px;
-        left: 0px; */
+      @media (max-width: $tablet) { 
         position: static;
       }
     }
@@ -176,19 +174,22 @@
     &__desc {
       // вся текстовая информация
       background: $white;
+      height: 145px;
       padding: 34px 40px 36px 60px;
       border-radius: 10px;
       box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
       @media (max-width: $desktop) {
         padding: 37px 40px 46px 20px;
+        width: 100%;
       }
       @media (max-width: $tablet) {
-        padding: 0px 0px 0px 40px;
-        width: 100%;
         background: $site-bg;
         box-shadow: none;
+        padding: 0px 0px 0px 40px;
+        height: auto;
+        width: 100%;
       }
-      &_spanish-doctor {
+      /* &_spanish-doctor {
         padding: 35px 40px 12px 60px; //надеюсь есть поумнее способ выставить всё по размеру
         @media (max-width: $desktop) {
           padding: 37px 40px 25px 20px;
@@ -197,21 +198,20 @@
           padding: 0px 0px 0px 40px;
           background: $site-bg;
         }
-      }
+      } */
     }
   
     &__title {
       @include text-style_pro(600, 18, 21, m);
       color: $gray;
       @media (max-width: $desktop) {
-        @include text-style(600, 14, 17);
-        grid-column-start: 2;
+        @include text-style(600, 14, 17); 
       }
     }
     &__text {
       @include text-style_pro(300, 16, 24, os);
-      padding-top: 7px;
       color: $gray;
+      padding-top: 7px;
       @media (max-width: $desktop) {
         @include text-style(300, 14, 21);
       }
