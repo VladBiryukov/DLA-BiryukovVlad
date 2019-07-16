@@ -1,8 +1,45 @@
 <footer class="footer">
   <div class="container">
     <div class="footer__block">
-     <div class="footer__nav"> @@include('./navigation.html')</div>
-      <p class="footer__text">© 2019, my-site.ru</p>
+
+      <div class="footer__top">
+        @@include('./../components/navigation.html')
+        <div class="footer__connection">
+          @@include('./../components/social-network.html')
+          <a class="button footer__button" href="#">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <!-- 1 -->
+        <div class="footer__information-company">
+          <a href="tel:+(303) 457-2040" class="footer__phone">(303) 457-2040</a>
+          <p class="footer__text footer__text_company-information">10313 Washington St., Thornton, CO 80229</p>
+        </div>
+        <!-- 2 -->
+        <div class="footer__work-time">
+          <p class="footer__text footer__text_work-time">Monday, Wednesday, Thursday — 9:00 AM - 6:00 PM</p>
+          <p class="footer__text footer__text_work-time">Friday — 9:00 AM - 1:00 PM</p>
+          <p class="footer__text footer__text_work-time">Saturday — 10:00 AM - 1:00 PM</p>
+        </div>
+        <!-- 3 -->
+        <div class="footer__information-site">
+
+          <div class="footer__rating-company">
+            <p class="footer__text footer__text_rating footer__text_information-site">Company rating:</p>
+            <div class="footer__rating">
+              <div class="footer__rating-stars"></div>
+              <div class="footer__rating-stars"></div>
+              <div class="footer__rating-stars"></div>
+              <div class="footer__rating-stars"></div>
+              <div class="footer__rating-stars"></div>
+            </div>
+          </div>
+          <p class="footer__text footer__text_information-site">© Copyright — Healthy Spine Family Chiropractic 2019</p>
+          <p class="footer__text footer__text_information-site">Web Design — Direct Line Development</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </footer>

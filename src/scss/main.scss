@@ -4,16 +4,17 @@
 //Импорт шрифтов
 @import "./components/fonts";
 
-//Импорт стилей страниц 
+//Импорт стилей страниц
 @import "./pages/index";
 
-//Импорт компонентов для страниц 
+//Импорт компонентов для страниц
 @import "./components/header";
 @import "./components/footer";
-@import "./components/_hamburger";
-@import "./components/_navigation";
-@import "./components/_social-network";
-@import "./components/_call-to-action";
-@import "./components/_comprehensive-treatment";
-@import "./components/_services";
-@import "./components/_advantages";
+@import "./components/hamburger";
+@import "./components/navigation";
+@import "./components/social-network";
+@import "./components/call-to-action";
+@import "./components/comprehensive-treatment";
+@import "./components/services";
+@import "./components/advantages";
+@import "./components/biography-dr";
