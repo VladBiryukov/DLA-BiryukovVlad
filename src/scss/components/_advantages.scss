@@ -4,9 +4,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-    padding: 80px 0 20px 0;
+    padding: 80px 0 50px 0;
     @media (max-width: $desktop) {
-      padding: 80px 0 20px 0;
+      padding: 71px 0 40px 0;
     }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
@@ -39,6 +39,9 @@
     &::before {
       @include line(110, 5);
       top: -35px;
+      @media (max-width: $desktop) {
+        top: -25px;
+      }
       @media (max-width: $tablet) {
         top: -20px;
       }
@@ -60,66 +63,49 @@
   display: flex;
   align-items: center;
   max-width: 450px;
-
   z-index: 2;
+  margin: 40px 0 10px 0;
   @media (max-width: $desktop) {
+    margin: 10px 0 2px 0;
     flex-direction: column;
     align-items: flex-start;
-    //max-width: 270px;
   }
   @media (max-width: $tablet) {
+    margin: 25px 0 2px 0;
     max-width: 100%;
     flex-direction: row;
-  }
-  //позиционирование карточек
-  //карточка
+  } 
+  //   1
   &_practice {
-    margin-top: 40px;
     grid-column-start: 2;
     grid-column-end: 7;
-    @media (max-width: $desktop) {
-      margin-top: -10px;
-    }
     @media (max-width: $tablet) {
       grid-column-start: 1;
       grid-column-end: 5;
-      margin-top: 10px;
     }
   }
-  //карточка
+  //   2
   &_spanish-doctor {
-    margin-top: 40px;
     grid-column-start: 7;
     grid-column-end: 12;
-    @media (max-width: $desktop) {
-      margin-top: -10px;
-    }
     @media (max-width: $tablet) {
       grid-column-start: 1;
       grid-column-end: 5;
     }
   }
-  //карточка
+  //  3
   &_experience {
-    margin-top: 50px;
     grid-column-start: 2;
     grid-column-end: 7;
-    @media (max-width: $desktop) {
-      margin-top: -10px;
-    }
     @media (max-width: $tablet) {
       grid-column-start: 1;
       grid-column-end: 5;
     }
   }
-  //карточка
+  //  4
   &_insurance {
-    margin-top: 50px;
     grid-column-start: 7;
-    grid-column-end: 12;
-    @media (max-width: $desktop) {
-      margin-top: -10px;
-    }
+    grid-column-end: 12; 
     @media (max-width: $tablet) {
       grid-column-start: 1;
       grid-column-end: 5;
@@ -139,8 +125,36 @@
       position: static;
     }
   }
+  // вся текстовая информация
+  &__desc {
+    background: $white;
+    height: 100%;
+    padding: 34px 40px 36px 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
+    @media (max-width: $desktop) {
+      padding: 37px 40px 46px 20px;
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      background: $site-bg;
+      box-shadow: none;
+      padding: 0px 0px 0px 40px;
+      height: auto;
+      width: 100%;
+    }
+    &_spanish-doctor {
+      padding: 35px 40px 12px 60px;
+      @media (max-width: $desktop) {
+        padding: 37px 40px 25px 20px;
+      }
+      @media (max-width: $tablet) {
+        padding: 0px 0px 0px 40px;
+        background: $site-bg;
+      }
+    }
+  }
   &__logo {
-    // логотип
     width: 70px;
     height: 70px;
     @media (max-width: $desktop) {
@@ -171,36 +185,6 @@
         @include sprite-estimate_little(3);
       }
     }
-  }
-
-  &__desc {
-    // вся текстовая информация
-    background: $white;
-    // height: 145px;
-    padding: 34px 40px 36px 60px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    @media (max-width: $desktop) {
-      padding: 37px 40px 46px 20px;
-      width: 100%;
-    }
-    @media (max-width: $tablet) {
-      background: $site-bg;
-      box-shadow: none;
-      padding: 0px 0px 0px 40px;
-      height: auto;
-      width: 100%;
-    }
-    /* &_spanish-doctor {
-        padding: 35px 40px 12px 60px; //надеюсь есть поумнее способ выставить всё по размеру
-        @media (max-width: $desktop) {
-          padding: 37px 40px 25px 20px;
-        }
-        @media (max-width: $tablet) {
-          padding: 0px 0px 0px 40px;
-          background: $site-bg;
-        }
-      } */
   }
 
   &__title {
