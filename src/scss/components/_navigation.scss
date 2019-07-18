@@ -5,6 +5,8 @@
     @include text-style_pro(300, 13, 18, os);
     color: $gray;
     text-transform: uppercase;
+    white-space: nowrap; 
+    z-index: 2;
 
     @media (max-width: $desktop) {
       @include text-style(300, 11, 15);
@@ -12,7 +14,7 @@
     &:hover {
       color: $gray;
     }
-    &:nth-child(2) {
+    &:nth-child(2) { 
       margin-left: 30px;
       @media (max-width: $desktop) {
         margin-left: 20px;

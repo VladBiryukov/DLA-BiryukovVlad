@@ -1,7 +1,29 @@
 .header {
   background: $site_bg;
+  .navigation {
+    &__link {
+      @media (max-width: $big-desktop) {
+        margin-left: 20px;
+      }
+      &:nth-child(2) {
+        @media (max-width: $big-desktop) {
+          margin-left: 20px;
+        }
+      }
+      &:nth-child(3) {
+        @media (max-width: $big-desktop) {
+          margin-left: 20px;
+        }
+      }
+      &:nth-child(4) {
+        @media (max-width: $big-desktop) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
 
-  &__block { 
+  &__block {
     padding-top: 40px;
     display: flex;
     align-items: flex-start;
@@ -11,7 +33,6 @@
       padding-top: 30px;
     }
     @media (max-width: $mobile) {
-      //  position: absolute; // для того что бы позвоночник заполс под header и не обрезался
       padding-top: 15px;
     }
   }
@@ -42,10 +63,22 @@
       display: none;
     }
   }
+  &__connection{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @media (max-width: $big-desktop){ 
+    }
+  }
   &__phone {
     @include text-style_pro(700, 16, 22, os);
     margin-right: 30px;
     color: $gray;
+    white-space: nowrap; 
+    @media (max-width: $big-desktop) { 
+      margin-right: 52px;
+    }
     &:hover {
       color: $gray;
     }

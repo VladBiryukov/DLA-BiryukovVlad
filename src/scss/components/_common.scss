@@ -9,8 +9,9 @@ $white: #FFFFFF;
  
 $site_bg:#f5fafe; 
 
-//media watch points
-$desktop: 1400px;
+//media watch points 
+$big-desktop:1130px;
+$desktop: 1023px;
 $tablet: 768px;
 $mobile: 768px;
  
@@ -33,8 +34,12 @@ $mobile: 768px;
   user-select: none;
   white-space: nowrap;
   text-align: center;
+  transition: 0.3s;
   border-radius: 10px;
   padding: 12px 24px; 
+  &:hover{
+    opacity: 0.8;
+  }
 }
 .blot-bg{ 
   background-repeat: no-repeat;
