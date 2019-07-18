@@ -5,6 +5,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
     padding: 80px 0 50px 0;
+
     @media (max-width: $desktop) {
       padding: 71px 0 40px 0;
     }
@@ -14,21 +15,18 @@
     }
   }
   &__info {
-    grid-column-start: 2;
-    grid-column-end: 8;
+    grid-column: 2/8;
 
     @media (max-width: $desktop) {
-      grid-column-start: 2;
-      grid-column-end: 10;
+      grid-column: 2/10;
     }
     @media (max-width: $tablet) {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column: 1/3;
     }
   }
   &__title {
-    position: relative;
     @include text-style_pro(600, 38, 44, m);
+    position: relative;
     color: $gray;
     letter-spacing: 1px;
 
@@ -39,6 +37,7 @@
     &::before {
       @include line(110, 5);
       top: -35px;
+
       @media (max-width: $desktop) {
         top: -25px;
       }
@@ -62,53 +61,46 @@
 .card-advantages {
   display: flex;
   align-items: center;
-  max-width: 450px;
   z-index: 2;
+  max-width: 450px;
   margin: 40px 0 10px 0;
   @media (max-width: $desktop) {
-    margin: 10px 0 2px 0;
     flex-direction: column;
     align-items: flex-start;
+    margin: 10px 0 2px 0;
   }
   @media (max-width: $tablet) {
+    flex-direction: row;
     margin: 25px 0 2px 0;
     max-width: 100%;
-    flex-direction: row;
-  } 
+  }
   //   1
   &_practice {
-    grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column: 2/7;
     @media (max-width: $tablet) {
-      grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column: 1/5;
     }
   }
   //   2
   &_spanish-doctor {
-    grid-column-start: 7;
-    grid-column-end: 12;
+    grid-column: 7/12;
     @media (max-width: $tablet) {
-      grid-column-start: 1;
-      grid-column-end: 5;
+      grid-row-start: 4;
+      grid-column: 1/5;
     }
   }
   //  3
   &_experience {
-    grid-column-start: 2;
-    grid-column-end: 7;
+    grid-column: 2/7;
     @media (max-width: $tablet) {
-      grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column: 1/5;
     }
   }
   //  4
   &_insurance {
-    grid-column-start: 7;
-    grid-column-end: 12; 
+    grid-column: 7/12;
     @media (max-width: $tablet) {
-      grid-column-start: 1;
-      grid-column-end: 5;
+      grid-column: 1/5;
     }
   }
 
@@ -139,8 +131,8 @@
     @media (max-width: $tablet) {
       background: $site-bg;
       box-shadow: none;
-      padding: 0px 0px 0px 40px;
       height: auto;
+      padding: 0px 0px 0px 35px;
       width: 100%;
     }
     &_spanish-doctor {
@@ -149,36 +141,36 @@
         padding: 37px 40px 25px 20px;
       }
       @media (max-width: $tablet) {
-        padding: 0px 0px 0px 40px;
+        padding: 0px 0px 0px 35px;
         background: $site-bg;
       }
     }
-  }
+  } // логотип
   &__logo {
     width: 70px;
     height: 70px;
     @media (max-width: $desktop) {
       width: 50px;
       height: 50px;
-    } // логотип
+    }
     &_practice {
       @include sprite-estimate_big(0);
       @media (max-width: $desktop) {
         @include sprite-estimate_little(0);
       }
-    } // логотип
+    }
     &_spanish-doctor {
       @include sprite-estimate_big(1);
       @media (max-width: $desktop) {
         @include sprite-estimate_little(1);
       }
-    } // логотип
+    }
     &_experience {
       @include sprite-estimate_big(2);
       @media (max-width: $desktop) {
         @include sprite-estimate_little(2);
       }
-    } // логотип
+    }
     &_insurance {
       @include sprite-estimate_big(3);
       @media (max-width: $desktop) {
