@@ -1,0 +1,116 @@
+.contact {
+  background: $site_bg;
+  &__block {
+    padding: 50px 0 50px 0;
+    @media (max-width: $desktop){
+      padding: 50px 0 30px 0;
+    }
+    @media (max-width: $tablet){
+      padding: 25px 0 25px 0;
+    }
+  }
+  &__content {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    padding: 65px 0 70px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: $contact_bg;
+    @media (max-width: $desktop) {
+      padding: 30px 0 50px 0;
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 62px 20px 40px 20px;
+    }
+    &::before {
+      @include sptite-manual(0, 269);
+      position: absolute;
+      left: 35px;
+      top: -28px;
+      content: "";
+      width: 205px;
+      height: 110px;
+      @media (max-width: $big-desktop) {
+        left: 0px;
+      }
+      @media (max-width: $desktop) {
+        @include sptite-manual(1, 509);
+        left: 55px;
+        background-size: 358px 632px;
+        width: 140px;
+        height: 75px;
+      }
+      @media (max-width: $tablet) {
+        @include sptite-manual(1, 426);
+        top: -21px;
+        left: 15px;
+        background-size: 305px 526px;
+        width: 121px; 
+        height: 63px; 
+      }
+    }
+  }
+  &__info {
+    grid-column: 4/10;
+    @media (max-width: $desktop) {
+      grid-column: 5/12;
+    }
+    @media (max-width: $tablet) {
+      grid-column: 1/5;
+    }
+  }
+  &__title {
+    @include text-style-pro(600, 58, 67, m);
+    color: $gray;
+    letter-spacing: 1px;
+    @media (max-width: $desktop) {
+      @include text-style(600, 28, 32);
+    }
+  }
+  &__text {
+    @include text-style-pro(300, 18, 29, os);
+    color: $gray;
+    padding-top: 20px;
+    @media (max-width: $desktop) {
+      @include text-style(300, 15, 25);
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  .phone {
+    @include text-style-pro(800, 24, 29, m);
+    display: inline-block;
+    margin-top: 24px;
+    color: $gray;
+    letter-spacing: 1px;
+    &:hover {
+      color: $gray;
+    }
+    @media (max-width: $desktop) {
+      @include text-style(600, 18, 21);
+      letter-spacing: 0.1px;
+    }
+  }
+  &__button {
+    @include text-style-pro(600, 16, 22, os);
+    background: $blue;
+    color: $white;
+    padding: 15px 58px;
+    margin-top: 29px;
+    &:hover {
+      color: $white;
+    }
+    @media (max-width: $desktop) {
+      @include text-style(600, 13, 18);
+      padding: 11px 40px;
+      margin-top: 22px;
+    }
+    @media (max-width: $tablet) {
+      margin-top: 17px;
+    }
+  }
+}

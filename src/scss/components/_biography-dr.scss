@@ -54,7 +54,7 @@
       }
       @media (max-width: $tablet) {
         grid-column: 1/5;
-        height: 176px; 
+        height: 176px;
         max-width: 100%;
       }
     }
@@ -74,19 +74,20 @@
   }
   &__title {
     position: relative;
-    &::before {
-      @include line(110, 5);
-      top: -35px;
-      @media (max-width: $desktop) {
-        top: -23px;
-      }
-    }
+
     @include text-style-pro(600, 38, 44, m);
     color: $gray;
     letter-spacing: 1px;
     @media (max-width: $desktop) {
       @include text-style(600, 22, 25);
       letter-spacing: 0.01px;
+    }
+    &::before {
+      @include line(110, 5);
+      top: -35px;
+      @media (max-width: $desktop) {
+        top: -23px;
+      }
     }
   }
   &__text {

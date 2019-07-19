@@ -2,9 +2,14 @@
   display: flex;
   width: 150px;
   justify-content: space-between;
+
   &__icon {
+    transition: 0.3s;
     height: 30px;
     width: 30px;
+    &:hover {
+      opacity: 0.5;
+    }
     &:nth-child(1) {
       @include sprite-social(0);
     }

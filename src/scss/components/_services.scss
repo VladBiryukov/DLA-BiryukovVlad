@@ -79,7 +79,9 @@
     //решил)
 
     @media (max-width: $tablet) {
+      margin-top: 5px;
       grid-column: 1/5;
+      grid-row: 2/2;
     }
   }
   /* 2 */
@@ -91,6 +93,7 @@
       margin-top: -275px;
     }
     @media (max-width: $tablet) {
+      grid-row: 4/4;
       margin-top: 0px;
       grid-column: 1/5;
     }
@@ -104,9 +107,9 @@
       margin-top: -95px;
     }
     @media (max-width: $tablet) {
-      grid-column: 1/5;
-      grid-row: 1;
       margin-top: 0px;
+      grid-column: 1/5;
+      grid-row: 3/3;
     }
   }
 
@@ -145,6 +148,7 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: contain;
+    background-size: cover;
     background-position: center;
   }
 
