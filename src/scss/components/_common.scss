@@ -5,7 +5,7 @@ $gray: #3a4959;
 $blue: #056cde;
 $orange: #ffce51;
 $white: #ffffff;
-//  background-color 
+//  background-color
 $contact_bg: #ffce51;
 $site_bg: #f5fafe;
 
@@ -49,5 +49,30 @@ $mobile: 768px;
   z-index: 0;
   @media (max-width: $tablet) {
     display: none;
+  }
+}
+// дорабатать
+.title_h1 {
+  margin: 0;
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 67px;
+  letter-spacing: 1px;
+  font-family: $font-Montserrat;
+  @media (max-width: $desktop) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+.title_h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 44px;
+  letter-spacing: 1px;
+  font-family: $font-Montserrat;
+  @media (max-width: $desktop) {
+    font-size: 22px;
+    line-height: 25px;
   }
 }

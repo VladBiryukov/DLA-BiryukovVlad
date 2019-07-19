@@ -71,7 +71,7 @@
     @media (max-width: $big-desktop){ 
     }
   }
-  &__phone {
+  .phone {
     @include text-style_pro(700, 16, 22, os);
     margin-right: 30px;
     color: $gray;

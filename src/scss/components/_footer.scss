@@ -137,7 +137,7 @@
     }
   }
 
-  &__phone {
+  .phone {
     @include text-style_pro(600, 14, 23, os);
     color: $gray;
     padding-bottom: 5px;
