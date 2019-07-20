@@ -10,7 +10,11 @@ button_mobile.onclick = function () {
     button_mobile.style.display = "none";
 }
 
- 
 
+var name = "Vlad";
+var age = prompt(name + " введите ваш возраст " );
+var number  = prompt("введите число котор")
 
+alert("ваш возраст умноженый на вад это " + age * 2);
 
+alert("ваш возраст разделить на два = " + age / 2);
