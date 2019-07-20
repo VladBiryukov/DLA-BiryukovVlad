@@ -1,4 +1,4 @@
-var text_mobile = document.getElementsByClassName('biography-dr-Osvaldo__text_mobile')[0];
+/* var text_mobile = document.getElementsByClassName('biography-dr-Osvaldo__text_mobile')[0];
 var button_mobile = document.getElementsByClassName('biography-dr-Osvaldo__button-mobile')[0];
 var text_desktop = document.getElementsByClassName('biography-dr-Osvaldo__text_desktop')[0];
 
@@ -18,3 +18,4 @@ var number  = prompt("введите число котор")
 alert("ваш возраст умноженый на вад это " + age * 2);
 
 alert("ваш возраст разделить на два = " + age / 2);
+ */
