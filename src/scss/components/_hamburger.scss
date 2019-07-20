@@ -7,7 +7,7 @@
   width: 26px;
   height: 18px;
   z-index: 2;
-  @media (max-width: $desktop) {
+  @media (max-width: $big-desktop) {
     display: flex;
   }
 

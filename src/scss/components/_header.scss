@@ -28,7 +28,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    @media (max-width: $desktop) {
+    @media (max-width: $big-desktop) {
       align-items: center;
       padding-top: 30px;
     }
@@ -59,7 +59,7 @@
     justify-content: space-between;
     padding-top: 7px;
     width: 74.5%;
-    @media (max-width: $desktop) {
+    @media (max-width: $big-desktop) {
       display: none;
     }
   }

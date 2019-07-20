@@ -4,36 +4,33 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
-    padding: 85px 0 20px 0;
+    padding: 85px 0 50px 0;
     @media (max-width: $desktop) {
-      padding: 49px 0 20px 0;
+      padding: 49px 0 35px 0;
     }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
-      padding: 35px 0 20px 0;
+      padding: 25px 0 20px 0;
     }
   }
-  &__avatar {
-    position: absolute;
-    bottom: 0;
+  &__avatar { 
     width: 100%;
-    max-width: 518px;
+    max-width: 540px;
     z-index: 2;
+    grid-column: 1/7;
     @media (max-width: $big-desktop) {
-      width: 307px;
-      max-height: 217px;
+     // width: 307px;
+     // max-height: 217px;  
     }
     @media (max-width: $tablet) {
-      max-height: 190px;
-      max-width: 268px;
+      grid-column: 1/5;
+      max-width: 100%;
       width: 100%;
     }
 
     &_bg {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      grid-column: 1/7;
+      
+
       background: url("./img/bg-biography.png");
       background-repeat: no-repeat;
       background-position: center;
