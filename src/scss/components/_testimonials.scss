@@ -1,0 +1,74 @@
+.testimonials {
+  background: $site_bg;
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    padding: 50px 0;
+  }
+  &__title {
+    position: relative;
+    @include text-style_pro(600, 38, 44, m);
+    grid-column: 2/4;
+    grid-row: 1/1;
+    @media (max-width: $desktop) {
+      @include text-style(600, 22, 25);
+    }
+    &::before {
+      @include line(110, 5);
+      position: absolute;
+      content: "";
+      border-radius: 10px;
+    }
+    &::after {
+      position: absolute;
+      @include sptite-manual(0, 99);  
+      content: "";
+      width: 130px;
+      height: 97px;
+      top: 80px;
+    }
+  }
+  &__slide-container {
+    grid-column: 4/12;
+    grid-row: 2/2;
+    padding: 40px 0;
+  }
+}
+
+.slide-testimonials {
+  max-width: 360px;
+  background: $slide-testimonials_bg;
+  border-radius: 10px;
+  &__content {
+    padding: 40px 40px 45px 40px;
+  }
+  &__rating {
+    display: flex;
+    &-stars {
+      @include sptite-manual(120, 68);
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      margin-left: 3px;
+    }
+  }
+  &__desc {
+    @include text-style_pro(300, 16, 26, os);
+    padding-top: 20px;
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(300, 14, 21);
+    }
+  }
+  &__first-name {
+    @include text-style_pro(600, 18, 29, os);
+    padding-top: 20px;
+    color: $gray;
+
+    @media (max-width: $desktop) {
+      @include text-style(600, 16, 20);
+    }
+  }
+}

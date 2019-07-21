@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <link href="main.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+
   <title>Bryukov Vlad</title>
 </head>
 
@@ -17,9 +19,35 @@
   @@include('./../components/services.html')
   @@include('./../components/advantages.html')
   @@include('./../components/biography-dr.html')
+  @@include('./../components/testimonials.html')
   @@include('./../components/contact.html')
   @@include('./../components/footer.html')
+
 </body>
 <script src="script.js" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+</script>
 
 </html>
