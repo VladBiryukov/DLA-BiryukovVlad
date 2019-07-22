@@ -1,9 +1,9 @@
 .contact {
   background: $site_bg;
   &__block {
-    padding: 50px 0 50px 0;
+    padding: 90px 0 50px 0;
     @media (max-width: $desktop) {
-      padding: 35px 0 30px 0;
+      padding: 83px 0 27px 0;
     }
     @media (max-width: $tablet) {
       padding: 25px 0 25px 0;
@@ -15,7 +15,7 @@
     position: relative;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-    padding: 65px 0 70px 0;
+    padding: 60px 0 73px 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: $contact_bg;
