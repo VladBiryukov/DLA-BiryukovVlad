@@ -7,7 +7,7 @@
 //Импорт стилей страниц
 @import "./pages/index";
 
-//Импорт компонентов для страниц   
+//Импорт компонентов для страниц    card-services
 @import "./components/header";
 @import "./components/footer";
 @import "./components/hamburger";
@@ -16,6 +16,7 @@
 @import "./components/call-to-action";
 @import "./components/comprehensive-treatment";
 @import "./components/services";
+@import "./components/card-services";
 @import "./components/advantages";
 @import "./components/biography-dr";
 @import "./components/testimonials";

@@ -4,13 +4,13 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
-    padding: 55px 0 50px 0;
+   // padding: 55px 0 50px 0;
     @media (max-width: $desktop) {
-      padding: 32px 0 35px 0;
+      //padding: 32px 0 35px 0;
     }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
-      padding: 25px 0 20px 0;
+     // padding: 25px 0 20px 0;
     }
   }
   &__avatar {

@@ -8,7 +8,7 @@ $white: #ffffff;
 //  background-color
 $contact_bg: #ffce51;
 $site_bg: #f5fafe;
-$slide-testimonials_bg:#D5E9FF;;
+$slide-testimonials_bg: #d5e9ff;
 
 //media watch points
 $big-desktop: 1130px;
@@ -20,7 +20,6 @@ $mobile: 768px;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 110px;
-  //overflow: hidden;
 
   @media (max-width: $desktop) {
     padding: 0 35px;
@@ -29,15 +28,25 @@ $mobile: 768px;
     padding: 0 20px;
   }
 }
+.section {
+  padding: 50px 0;
+  @media (max-width: $desktop) {
+    padding: 35px 0;
+  }
+  @media (max-width: $tablet) {
+    padding: 30px 0;
+  }
+}
 .button {
   text-transform: uppercase;
   display: inline-block;
   user-select: none;
   white-space: nowrap;
   text-align: center;
-  transition: 0.3s;
+  transition-property: opacity;
+  transition-duration: 0.3s;
   border-radius: 10px;
-  padding: 12px 24px;
+  padding: 12px 22px;
   &:hover {
     opacity: 0.8;
   }

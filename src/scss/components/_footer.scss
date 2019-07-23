@@ -29,7 +29,7 @@
     @media (max-width: $tablet) {
       flex-direction: column;
       align-items: flex-start;
-      width: 100%; 
+      width: 100%;
     }
   }
   &__button {
@@ -141,9 +141,12 @@
     @include text-style_pro(600, 14, 23, os);
     color: $gray;
     padding-bottom: 5px;
+    transition-property: color;
+    transition-duration: 0.3s;
+
     &:hover {
       text-decoration: none;
-      color: $gray;
+      color: $blue;
     }
   }
   &__rating-company {

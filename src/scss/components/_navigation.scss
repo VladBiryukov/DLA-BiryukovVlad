@@ -5,18 +5,18 @@
     @include text-style_pro(300, 13, 18, os);
     color: $gray;
     text-transform: uppercase;
-    white-space: nowrap; 
+    white-space: nowrap;
     z-index: 2;
-    transition: 0.3s;
+    transition-property: color;
+    transition-duration: 0.3s;
 
     @media (max-width: $desktop) {
       @include text-style(300, 11, 15);
     }
     &:hover {
-      
       color: $blue;
     }
-    &:nth-child(2) { 
+    &:nth-child(2) {
       margin-left: 30px;
       @media (max-width: $desktop) {
         margin-left: 20px;

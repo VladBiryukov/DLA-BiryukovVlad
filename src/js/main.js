@@ -51,8 +51,8 @@ fName = "Б Влад";
 console.log(fName);
 console.log(fName * 2); 
 console.log(typeof textBiography);
-happyNumber = prompt("назовите ваше счастливое число");
-alert("ваше счастливое число умноженное во второй степени " + happyNumber * happyNumber )
+/* happyNumber = prompt("назовите ваше счастливое число");
+alert("ваше счастливое число умноженное во второй степени " + happyNumber * happyNumber ) */
 
 
 

@@ -5,9 +5,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
-    padding: 58px 0 75px 0;
+    padding: 8px 0 0 0;
     @media (max-width: $desktop) {
-      padding: 30px 0 50px 0;
+      // padding: 30px 0 50px 0;
     }
     @media (max-width: $tablet) {
       display: none;
@@ -40,17 +40,16 @@
   &__title {
     position: relative;
     @include text-style_pro(600, 38, 44, m);
-    color: $gray;
+    color: $gray; 
     letter-spacing: 1px;
     @media (max-width: $desktop) {
       letter-spacing: 0.1px;
       @include text-style(600, 22, 28);
     }
     &::before {
-      @include line(110, 5);
-      top: -40px;
+      @include line(110, 5); 
       @media (max-width: $desktop) {
-        top: -22px;
+        top: -20px;
       }
       @media (max-width: $tablet) {
       }
@@ -60,13 +59,12 @@
     @include text-style_pro(300, 18, 29, os);
     color: $gray;
     line-height: 30px;
+    padding-top: 15px;
     @media (max-width: $desktop) {
       @include text-style(300, 15, 25);
     }
   }
-  &__desc {
-    margin-top: 15px;
-  }
+
   &__button {
     @include text-style_pro(600, 13, 18, m);
     color: $gray;

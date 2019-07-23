@@ -5,11 +5,10 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-    padding: 65px 0 50px 0;
+    padding: 38px 0 0 0;
     grid-row-gap: 40px;
 
     @media (max-width: $desktop) {
-      padding: 42px 0 25 0;
       grid-row-gap: 30px;
     }
     @media (max-width: $mobile) {
@@ -17,10 +16,24 @@
       grid-row-gap: 20px;
     }
   }
+  &__card-block {
+    display: grid;
+    grid-column: 1/13;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    @media (max-width: $desktop) {
+      grid-row-gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      grid-column: 1/5;
+      grid-template-columns: repeat(4, 1fr);
+      grid-row-gap: 20px;
+    }
+  }
   &__title {
     z-index: 2;
     position: relative;
-    grid-column: 2/4;
+    grid-column: 2/13;
     grid-row: 1/1;
     @include text-style_pro(600, 38, 44, m);
     letter-spacing: 1px;
@@ -30,7 +43,7 @@
       letter-spacing: 0.1px;
     }
     @media (max-width: $tablet) {
-      grid-column-start: 1;
+      grid-column: 1/5;
     }
     &::before {
       @include line(110, 5);
@@ -62,174 +75,4 @@
     }
   }
 }
-.card-services {
-  z-index: 2;
-  border-radius: 10px;
-  background: $white;
-  box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-  max-width: 450px;
-  @media (max-width: $tablet) {
-    max-width: 100%;
-  }
-
-  /* 1 */
-  &_chiropractic {
-    grid-column: 2/7;
-    grid-row: 2/2;
-    //max-height: 470px; // я пока что не смог сделать так что бы блок chiropractic автоматически не растягивался при позиционировании блока acupuncture гридом по вертикале.  не стал особо заворачиваться на этом моменте в силу того что конкретно эти гриды в компании не юзаются, позже попробую найти решение даной задачи,пока сделал костылём
-    //решил)
-
-    @media (max-width: $tablet) {
-      margin-top: 5px;
-      grid-column: 1/5;
-      grid-row: 2/2;
-    }
-  }
-  /* 2 */
-  &_acupuncture {
-    margin-top: -354px;
-    grid-column: 7/12;
-    grid-row: 3/3;
-    @media (max-width: $desktop) {
-      margin-top: -278px;
-    }
-    @media (max-width: $tablet) {
-      grid-row: 4/4;
-      margin-top: 0px;
-      grid-column: 1/5;
-    }
-  }
-  /* 3 */
-  &_massage {
-    margin-top: -145px;
-    grid-column: 2/7;
-    grid-row: 4/4;
-    @media (max-width: $desktop) {
-      margin-top: -100px;
-    }
-    @media (max-width: $tablet) {
-      margin-top: 0px;
-      grid-column: 1/5;
-      grid-row: 3/3;
-    }
-  }
-
-  &__info {
-    padding: 33px 70px 30px 40px;
-    @media (max-width: $desktop) {
-      padding: 20px 20px 20px 20px;
-    }
-    @media (max-width: $tablet) {
-      padding: 13px 48px 16px 20px;
-      grid-row: 3;
-    }
-
-    /* 2 */
-    &_acupuncture {
-      padding: 33px 70px 60px 40px;
-      @media (max-width: $desktop) {
-        padding: 20px 20px 15px 20px;
-      }
-      @media (max-width: $tablet) {
-        padding: 13px 48px 16px 20px;
-        grid-row: 4;
-      }
-    } /* 3 */
-    &_massage {
-      @media (max-width: $desktop) {
-        padding: 20px 20px 15px 20px;
-      }
-      @media (max-width: $tablet) {
-        padding: 13px 48px 16px 20px;
-      }
-    }
-  }
-  &__img {
-    width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: cover;
-    background-position: center;
-    @media (max-width: 340px) {
-      max-height: 100px;
-    }
-  }
-
-  &__title {
-    @include text-style_pro(600, 24, 28, m);
-    color: $gray;
-    letter-spacing: 1px;
-
-    @media (max-width: $desktop) {
-      @include text-style(600, 18, 21);
-      letter-spacing: 0.5px;
-    }
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
-  &__desc {
-    padding-top: 6px;
-    @media (max-width: $desktop) {
-      padding-top: 10px;
-    }
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
-
-  &__text {
-    @include text-style_pro(300, 16, 24, os);
-    color: $gray;
-
-    @media (max-width: $desktop) {
-      @include text-style(300, 14, 21);
-    }
-  }
-  &__link {
-    @include text-style_pro(300, 13, 18, os);
-    color: $blue;
-    text-transform: uppercase;
-    display: inline-block;
-    white-space: nowrap;
-    padding-bottom: 10px;
-    margin-right: 10px;
-
-    @media (max-width: $desktop) {
-      @include text-style(300, 11, 15);
-      padding-bottom: 15px;
-    }
-    @media (max-width: $tablet) {
-      padding: 0;
-    }
-    &:hover {
-      color: $blue;
-    }
-    &_desktop {
-      @media (max-width: $tablet) {
-        display: none;
-      }
-    }
-    &_mobile {
-      display: none;
-      text-transform: none;
-      @media (max-width: $mobile) {
-        @include text-style(600, 18, 21);
-        letter-spacing: 1px;
-        display: inline-block;
-      }
-    }
-  }
-  &__footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;
-    @media (max-width: $desktop) {
-      padding-top: 25px;
-    }
-    @media (max-width: $mobile) {
-      padding: 0;
-    }
-  }
-}
+ 

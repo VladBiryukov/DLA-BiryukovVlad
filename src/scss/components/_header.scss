@@ -63,24 +63,26 @@
       display: none;
     }
   }
-  &__connection{
+  &__connection {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-end;
-    @media (max-width: $big-desktop){ 
+    @media (max-width: $big-desktop) {
     }
   }
   .phone {
     @include text-style_pro(700, 16, 22, os);
     margin-right: 30px;
     color: $gray;
-    white-space: nowrap; 
-    @media (max-width: $big-desktop) { 
+    transition-property: color;
+    transition-duration: 0.3s;
+    white-space: nowrap;
+    @media (max-width: $big-desktop) {
       margin-right: 52px;
     }
     &:hover {
-      color: $gray;
+      color: $blue;
     }
   }
   &__button {
