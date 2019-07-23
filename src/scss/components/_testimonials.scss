@@ -4,15 +4,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-   // padding: 95px 0 50px 0;
+    padding-top: 40px;
     @media (max-width: $desktop) {
-     // padding: 60px 0 35px 0;
     }
     @media (max-width: $tablet) {
-     // padding: 35px 0 25px 0;
     }
     @media (max-width: $tablet) {
-     // padding: 50px 0 55px 0;
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -37,7 +34,7 @@
       @media (max-width: $desktop) {
         top: -25px;
       }
-      @media (max-width: $tablet){
+      @media (max-width: $tablet) {
         top: -20px;
       }
     }
@@ -73,89 +70,11 @@
   }
 }
 
-.slide-testimonials {
-  box-shadow: 0px 0px 20px rgba(118, 157, 202, 0.15);
-  width: 360px;
-  height: 360px;
-  background: $slide-testimonials_bg;
-  border-radius: 10px;
-  &:nth-child(1) {
-    margin-left: 20px;
-    @media (max-width: $tablet) {
-      margin: 0;
-    }
-  }
-  &:nth-child(2) {
-    margin-right: 20px;
-  }
-  @media (max-width: 1200px) {
-    width: 340px;
-    height: 350px;
-  }
-  @media (max-width: $big-desktop) {
-    width: 300px;
-    height: 340px;
-  }
-  @media (max-width: $desktop) {
-    width: 300px;
-    height: 280px;
-  }
-  @media (max-width: $tablet) {
-    width: 280px;
-    height: 295px;
-  }
-  &__desktop {
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
-  &__content {
-    padding: 40px 40px 32px 40px;
-    @media (max-width: 1200px) {
-      padding: 30px 20px 32px 20px;
-    }
-    @media (max-width: $tablet){
-      padding: 25px 20px 32px 20px;
-    }
-  }
-  &__rating {
-    display: flex;
-    &-stars {
-      @include sptite-manual(120, 68);
-      cursor: pointer;
-      width: 22px;
-      height: 22px;
-      margin-left: 3px;
-    }
-  }
-  &__desc {
-    @include text-style_pro(300, 16, 26, os);
-    padding-top: 20px;
-    color: $gray;
-    text-align: left;
-
-    @media (max-width: $desktop) {
-      @include text-style(300, 14, 21);
-    }
-    @media (max-width: $tablet){
-      padding-top: 15px;
-    }
-  }
-  &__first-name {
-    @include text-style_pro(600, 18, 29, os);
-    padding-top: 20px;
-    color: $gray;
-    text-align: left;
-    @media (max-width: $desktop) {
-      @include text-style(600, 16, 20);
-    }
-  }
-}
-
 .swiper {
   &-container {
     width: 100%;
-    height: 100%;
+    height: 100%; 
+    border-radius: 10px;
   }
   &-slide {
     text-align: center;

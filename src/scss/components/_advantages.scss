@@ -4,16 +4,31 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-   // padding: 90px 0 50px 0;
+    padding-top: 37px;
 
-    @media (max-width: $desktop) {
-     // padding: 71px 0 40px 0;
-    }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
-     // padding: 45px 0 25px 0;
     }
   }
+  &__card-block {
+    padding-top: 40px;
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+    @media (max-width: $desktop) {
+      padding-top: 60px;
+      grid-row-gap: 60px;
+    }
+    @media (max-width: $tablet) {
+      grid-column: 1/5;
+      grid-template-columns: repeat(4, 1fr);
+      padding-top: 25px;
+      grid-row-gap: 25px;
+    }
+  }
+
   &__info {
     grid-column: 2/8;
 
@@ -57,144 +72,4 @@
     }
   }
 }
-// я не стал выносить стили карточки в отдельный scss файл что бы избежать сильного дробления кода по папкам
-.card-advantages {
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  max-width: 450px;
-  margin: 40px 0 10px 0;
-  @media (max-width: $desktop) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 0 2px 0;
-  }
-  @media (max-width: $tablet) {
-    flex-direction: row;
-    margin: 25px 0 2px 0;
-    max-width: 100%;
-  }
-  //   1
-  &_practice {
-    grid-column: 2/7;
-    @media (max-width: $tablet) {
-      grid-column: 1/5;
-    }
-  }
-  //   2
-  &_spanish-doctor {
-    grid-column: 7/12;
-    @media (max-width: $tablet) {
-      grid-row-start: 4;
-      grid-column: 1/5;
-    }
-  }
-  //  3
-  &_experience {
-    grid-column: 2/7;
-    @media (max-width: $tablet) {
-      grid-column: 1/5;
-    }
-  }
-  //  4
-  &_insurance {
-    grid-column: 7/12;
-    @media (max-width: $tablet) {
-      grid-column: 1/5;
-    }
-  }
-
-  //бокс с лого
-  &__box-logo {
-    position: relative;
-    width: 35px;
-    z-index: 2;
-    @media (max-width: $desktop) {
-      left: 20px;
-      top: 20px;
-    }
-    @media (max-width: $tablet) {
-      position: static;
-    }
-  }
-  // вся текстовая информация
-  &__desc {
-    background: $white;
-    height: 100%;
-    padding: 34px 40px 36px 60px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 40px rgba(118, 157, 202, 0.15);
-    @media (max-width: $desktop) {
-      padding: 37px 40px 46px 20px;
-      width: 100%;
-    }
-    @media (max-width: $tablet) {
-      background: $site-bg;
-      box-shadow: none;
-      height: auto;
-      padding: 0px 0px 0px 35px;
-      width: 100%;
-    }
-    &_spanish-doctor {
-      padding: 35px 40px 12px 60px;
-      @media (max-width: $desktop) {
-        padding: 37px 40px 25px 20px;
-      }
-      @media (max-width: $tablet) {
-        padding: 0px 0px 0px 35px;
-        background: $site-bg;
-      }
-    }
-  } // логотип
-  &__logo {
-    width: 70px;
-    height: 70px;
-    @media (max-width: $desktop) {
-      width: 50px;
-      height: 50px;
-    }
-    &_practice {
-      @include sprite-estimate_big(0);
-      @media (max-width: $desktop) {
-        @include sprite-estimate_little(0);
-      }
-    }
-    &_spanish-doctor {
-      @include sprite-estimate_big(1);
-      @media (max-width: $desktop) {
-        @include sprite-estimate_little(1);
-      }
-    }
-    &_experience {
-      @include sprite-estimate_big(2);
-      @media (max-width: $desktop) {
-        @include sprite-estimate_little(2);
-      }
-    }
-    &_insurance {
-      @include sprite-estimate_big(3);
-      @media (max-width: $desktop) {
-        @include sprite-estimate_little(3);
-      }
-    }
-  }
-
-  &__title {
-    @include text-style_pro(600, 18, 21, m);
-    color: $gray;
-    @media (max-width: $desktop) {
-      @include text-style(600, 14, 17);
-    }
-  }
-  &__text {
-    @include text-style_pro(300, 16, 24, os);
-    color: $gray;
-    padding-top: 7px;
-    @media (max-width: $desktop) {
-      @include text-style(300, 14, 21);
-    }
-    @media (max-width: $tablet) {
-      padding-top: 5px;
-    }
-  }
-}
+ 
