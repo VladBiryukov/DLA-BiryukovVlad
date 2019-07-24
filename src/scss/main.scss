@@ -1,13 +1,14 @@
 //Импорт общих стилей
 @import "./components/common";
 @import "./components/mixins";
+@import "./components/swiper";
 //Импорт шрифтов
 @import "./components/fonts";
 
 //Импорт стилей страниц
 @import "./pages/index";
 
-//Импорт компонентов для страниц  card-testimonials
+//Импорт компонентов для страниц  
 @import "./components/header";
 @import "./components/footer";
 @import "./components/hamburger";

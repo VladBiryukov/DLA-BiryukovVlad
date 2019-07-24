@@ -18,7 +18,7 @@ function scss() {
       cascade: false
     }))
     .pipe(cleanCSS({
-      level: 2
+      level: 1 
     }))
     .pipe(gulp.dest('./build'))
     .pipe(browserSync.reload({ stream: true }))
