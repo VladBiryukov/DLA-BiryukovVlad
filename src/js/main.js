@@ -1,5 +1,3 @@
-
-
 var text_mobile = document.getElementsByClassName('biography-dr-Osvaldo__text_mobile')[0],
    button_mobile = document.getElementsByClassName('biography-dr-Osvaldo__button-mobile')[0];
 
@@ -43,36 +41,8 @@ button_mobile.onclick = function biography() {
       return hidenText();
    }
 }
-
-/* var number = 777,
-   string = "qwe ⓒ Женя :D",
-   happyNumber;
-console.log(number, typeof number);
-console.log(string, typeof string);
-console.log(number === 777 / 2 * 2);
-console.log(number === 999);
-number = NaN;
-console.log(number);
-var fName;
-console.log(fName);
-fName = "Б Влад";
-console.log(fName);
-console.log(fName * 2);
-console.log(typeof textBiography); */
-/* happyNumber = prompt("назовите ваше счастливое число");
-alert("ваше счастливое число умноженное во второй степени " + happyNumber * happyNumber ) */
-
-
-
-
-
-
-
-
-
-//  one = Number(one);
-
-var number,
+// написал на уроке, немного через жопу переменные, для меня на тот момент важен был результат
+/* var number,
    oneNumber,
    calculator;
 
@@ -112,30 +82,8 @@ else if (calculator === "+") {
 }
 else {
    alert("садись, два")
-}
-
-
-
-
-
-
-
-
-
-/*
-var name = "Vlad";
-var age = prompt(name + " введите ваш возраст " );
-var number  = prompt("введите число котор")
-
-alert("ваш возраст умноженый на вад это " + age * 2);
-
-alert("ваш возраст разделить на два = " + age / 2);
- */
-
-
-
-
-
+} */
+ 
 
 
 
