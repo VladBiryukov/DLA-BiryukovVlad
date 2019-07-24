@@ -605,17 +605,56 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
  */ //
-.swiper-button-next { 
-  top:auto;
-  bottom:0px;  
-  width: 29px;
-  height: 16px;
-  @include sptite-manual(144,71)
+.swiper-button-next {
+  @include sptite-manual_b(138, 66);
+  background-size: 296px 508px;
+  position: static;
+  user-select: none;
+  margin-right: 17px;
+  width: 32px;
+  height: 19px;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+   @media (max-width: $tablet){
+     display:none;
+   }
 }
-.swiper-button-prev { 
-  top:auto;
-  bottom:0px;
-  width: 29px;
-  height: 16px;
-  @include sptite-manual(171,71)
+.swiper-button-prev {
+  @include sptite-manual_b(138, 66);
+  background-size: 296px 508px;
+  transform: scaleX(-1);
+  position: static;
+  user-select: none;
+  width: 32px;
+  height: 19px;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+   @media (max-width: $tablet){
+     display:none;
+   }
+}
+.swiper-pagination-bullet {
+  margin: 0 5px;
+  @media (max-width: $tablet){
+    margin: 0 3px;
+  }
+}
+.swiper-pagination {
+  position: static;
+  margin-top: -20px;
+}
+.swiper-control-block {
+  margin-top: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $tablet){
+    justify-content: center;
+  }
 }
