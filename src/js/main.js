@@ -80,10 +80,13 @@ calculator = prompt("что нужно сделать", "");
 
 if (calculator === "*") {
    var multiply = prompt("введите число которое нужно умножить");
-   var one = prompt("на кокое число");
+   var oneNumber = prompt("на кокое число");
 
-   if (one == Number(one) && multiply == Number(multiply)) {
-      alert(multiply * one)
+   if (multiply == "" && oneNumber == "") {
+      alert("вы ничего не ввели")
+   }
+   else if (oneNumber == Number(oneNumber) && multiply == Number(multiply)) {
+      alert(multiply * oneNumber)
    }
    else {
       alert("так нельзя")
