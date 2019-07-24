@@ -11,25 +11,20 @@ var textBiography = [
       "hiden",
       "View More"
    ];
-// слайдер
-/* var swiper = new Swiper('.swiper-container', {
-   pagination: {
-      el: '.swiper-pagination',
-   },
-}); */
+//слайдер 
 var swiper = new Swiper('.swiper-container', {
    slidesPerView: 1,
    spaceBetween: 30,
    loop: true,
    pagination: {
-     el: '.swiper-pagination',
-     clickable: true,
+      el: '.swiper-pagination',
+      clickable: true,
    },
    navigation: {
-     nextEl: '.swiper-button-next',
-     prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
    },
- });
+});
 
 //текст с биографией 
 button_mobile.onclick = function biography() {
@@ -49,7 +44,7 @@ button_mobile.onclick = function biography() {
    }
 }
 
-var number = 777,
+/* var number = 777,
    string = "qwe ⓒ Женя :D",
    happyNumber;
 console.log(number, typeof number);
@@ -62,10 +57,85 @@ var fName;
 console.log(fName);
 fName = "Б Влад";
 console.log(fName);
-console.log(fName * 2); 
-console.log(typeof textBiography);
+console.log(fName * 2);
+console.log(typeof textBiography); */
 /* happyNumber = prompt("назовите ваше счастливое число");
 alert("ваше счастливое число умноженное во второй степени " + happyNumber * happyNumber ) */
+
+
+
+
+
+
+
+
+
+//  one = Number(one);
+
+var number,
+   oneNumber,
+   calculator;
+
+calculator = prompt("что нужно сделать", "");
+
+if (calculator === "*") {
+   var multiply = prompt("введите число которое нужно умножить");
+   var one = prompt("на кокое число");
+
+   if (one == Number(one) && multiply == Number(multiply)) {
+      alert(multiply * one)
+   }
+   else {
+      alert("так нельзя")
+   }
+}
+
+else if (calculator === "/") {
+   var divide = prompt("введите число которое нужно поделить");
+   var one = prompt("на кокое число");
+   alert(divide / one)
+}
+else if (calculator === "-") {
+   var minus = prompt("введите число из которого нужно вычесть");
+   var one = prompt("какое число");
+   alert(minus - one)
+}
+else if (calculator === "+") {
+   var plus = prompt("ввидете число которое нужно сложить");
+   var one = prompt("с каким числом");
+   plus = Number(plus);
+   one = Number(one);
+   alert(plus + one)
+}
+else {
+   alert("садись, два")
+}
+
+
+
+
+
+
+
+
+
+/*
+var name = "Vlad";
+var age = prompt(name + " введите ваш возраст " );
+var number  = prompt("введите число котор")
+
+alert("ваш возраст умноженый на вад это " + age * 2);
+
+alert("ваш возраст разделить на два = " + age / 2);
+ */
+
+
+
+
+
+
+
+
 
 
 
@@ -142,12 +212,3 @@ button_mobile.onclick = function openBiography() {
 
 
 
-/*
-var name = "Vlad";
-var age = prompt(name + " введите ваш возраст " );
-var number  = prompt("введите число котор")
-
-alert("ваш возраст умноженый на вад это " + age * 2);
-
-alert("ваш возраст разделить на два = " + age / 2);
- */
