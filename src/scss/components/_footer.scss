@@ -160,7 +160,8 @@
   &__rating {
     display: flex;
     &-stars {
-      @include sptite-manual(120, 68);
+      @include sptite-manual_b(117, 66);
+      background-size: 296px 508px;
       cursor: pointer;
       width: 22px;
       height: 22px;

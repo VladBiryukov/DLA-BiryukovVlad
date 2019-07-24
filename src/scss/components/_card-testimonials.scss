@@ -1,8 +1,7 @@
 .card-testimonials {
   box-shadow: 0px 0px 20px rgba(118, 157, 202, 0.15);
-  width: 360px;
+  max-width: 360px;
   min-height: 360px;
-  //max-height: 395px;
   background: $slide-testimonials_bg;
   border-radius: 10px;
 
@@ -12,21 +11,22 @@
       display: none;
     }
   }
+  &:nth-child(odd) {
+    margin-right: 10px;
+  }
   @media (max-width: 1200px) {
     width: 340px;
   }
   @media (max-width: $big-desktop) {
-    width: 300px;
-    // height: 340px;
-    min-height: auto;
+    min-height: 330px;
   }
-  @media (max-width: $desktop) {
-    width: 300px;
-    //  height: 270px;
+  @media (max-width: $desktop){
+    min-height: 280px;
   }
+
   @media (max-width: $tablet) {
     width: 280px;
-    // height: 295px;
+    min-height:auto;
   }
 
   &__content {
@@ -41,7 +41,6 @@
   &__rating {
     display: flex;
     &-stars {
-      /*  @include sptite-manual(120, 68); */
       @include sptite-manual_b(117, 66);
       background-size: 296px 508px;
       cursor: pointer;
