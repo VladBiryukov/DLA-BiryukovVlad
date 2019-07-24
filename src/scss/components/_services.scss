@@ -5,10 +5,11 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
-    padding-top: 22px;
+    padding-top: 40px;
     grid-row-gap: 40px;
 
     @media (max-width: $desktop) {
+      padding-top: 22px; 
       grid-row-gap: 30px;
     }
     @media (max-width: $tablet) {

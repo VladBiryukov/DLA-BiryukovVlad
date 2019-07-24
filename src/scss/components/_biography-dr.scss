@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
-    padding-top: 30px;
+    padding-top: 15px;
 
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
-      padding-top: 18px;
+      padding-top: 10px;
     }
   }
   &__avatar {
@@ -64,7 +64,7 @@
       @include text-style(300, 15, 25);
     }
     @media (max-width: $tablet) {
-      padding-top: 10px;
+      padding-top: 15px;
     }
 
     &_desktop {
