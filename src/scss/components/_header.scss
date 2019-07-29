@@ -71,7 +71,7 @@
     @media (max-width: $big-desktop) {
     }
   }
-  .phone {
+  &__phone {
     @include text-style_pro(700, 16, 22, os);
     margin-right: 30px;
     color: $gray;
@@ -85,12 +85,33 @@
       color: $blue;
     }
   }
+
   &__button {
     @include text-style_pro(700, 13, 18, os);
     color: $gray;
     background: $orange;
     &:hover {
       color: $gray;
+    }
+  }
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    cursor: pointer;
+    width: 26px;
+    height: 18px;
+    z-index: 2;
+    @media (max-width: $big-desktop) {
+      display: flex;
+    }
+  
+    &-line {
+      height: 2px;
+      width: 100%;
+      background: $blue;
+      border-radius: 100px;
     }
   }
 }

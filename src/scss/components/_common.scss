@@ -31,7 +31,7 @@ $mobile: 768px;
 .section {
   padding: 50px 0;
   @media (max-width: $desktop) {
-    padding: 35px 0;
+    padding: 25px 0;
   }
   @media (max-width: $tablet) {
     padding: 20px 0;
@@ -59,30 +59,5 @@ $mobile: 768px;
   z-index: 0;
   @media (max-width: $tablet) {
     display: none;
-  }
-}
-// дорабатать
-.title_h1 {
-  margin: 0;
-  font-size: 58px;
-  font-weight: 600;
-  line-height: 67px;
-  letter-spacing: 1px;
-  font-family: $font-Montserrat;
-  @media (max-width: $desktop) {
-    font-size: 28px;
-    line-height: 32px;
-  }
-}
-.title_h2 {
-  margin: 0;
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 44px;
-  letter-spacing: 1px;
-  font-family: $font-Montserrat;
-  @media (max-width: $desktop) {
-    font-size: 22px;
-    line-height: 25px;
   }
 }

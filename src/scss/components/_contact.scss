@@ -82,7 +82,7 @@
       display: none;
     }
   }
-  .phone {
+  &__phone {
     @include text-style-pro(800, 24, 29, m);
     display: inline-block;
     margin-top: 24px;

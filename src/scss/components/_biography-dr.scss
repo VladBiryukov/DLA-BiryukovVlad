@@ -5,7 +5,9 @@
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
     padding-top: 15px;
-
+    @media (max-width: $desktop) {
+      padding-top: 30px;
+    }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
       padding-top: 10px;
@@ -52,7 +54,7 @@
       letter-spacing: 0.01px;
     }
     &::before {
-      @include line(110, 5); 
+      @include line(); 
     }
   }
   &__text {

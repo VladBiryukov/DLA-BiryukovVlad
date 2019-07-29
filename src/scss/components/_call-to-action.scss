@@ -7,11 +7,11 @@
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 20px;
     @media (max-width: $desktop) {
-      padding-top: 34px;
+      padding-top: 44px;
     }
     @media (max-width: $tablet) {
       grid-template-columns: repeat(4, 1fr);
-     padding-top: 115px;
+      padding-top: 115px;
     }
   }
   //информация
@@ -34,7 +34,7 @@
     }
 
     &::before {
-      @include line(110, 5); 
+      @include line();
     }
   }
   &__text {

@@ -49,9 +49,9 @@
   }
 }
 
-@mixin line($width, $height) {
-  height: $height + (px);
-  width: $width + (px);
+@mixin line() {
+  height: 5px;
+  width: 110px;
   background-color: $blue;
   content: "";
   border-radius: 10px;

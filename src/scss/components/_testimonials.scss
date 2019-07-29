@@ -25,7 +25,7 @@
       grid-column: 1/3;
     }
     &::before {
-      @include line(110, 5);
+      @include line();
       position: absolute;
       content: "";
       border-radius: 10px;
@@ -64,10 +64,10 @@
 
 .swiper {
   &-container {
-    width: 100%;  
-    height: auto; 
+    width: 100%;
+    height: auto;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
+    border-top-right-radius: 10px;
   }
   &-slide {
     text-align: center;

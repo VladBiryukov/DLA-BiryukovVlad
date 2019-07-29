@@ -9,7 +9,7 @@
     grid-row-gap: 40px;
 
     @media (max-width: $desktop) {
-      padding-top: 22px; 
+      padding-top: 42px; 
       grid-row-gap: 30px;
     }
     @media (max-width: $tablet) {
@@ -48,7 +48,7 @@
       grid-column: 1/5;
     }
     &::before {
-      @include line(110, 5);
+      @include line();
     }
   }
   &__blot-bg {

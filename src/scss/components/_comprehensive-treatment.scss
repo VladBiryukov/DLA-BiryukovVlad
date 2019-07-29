@@ -1,17 +1,16 @@
 .comprehensive-treatment {
   background: $site_bg;
-@media (max-width: $tablet) {
-      display: none;
-    }
+  @media (max-width: $tablet) {
+    display: none;
+  }
   &__block {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
     padding-top: 6px;
     @media (max-width: $desktop) {
-      // padding: 30px 0 50px 0;
+      padding-top: 26px;
     }
-    
   }
   // изображение
   &__wrap-img {
@@ -40,14 +39,14 @@
   &__title {
     position: relative;
     @include text-style_pro(600, 38, 44, m);
-    color: $gray; 
+    color: $gray;
     letter-spacing: 1px;
     @media (max-width: $desktop) {
       letter-spacing: 0.1px;
       @include text-style(600, 22, 28);
     }
     &::before {
-      @include line(110, 5); 
+      @include line();
       @media (max-width: $desktop) {
         top: -20px;
       }
@@ -61,7 +60,7 @@
     line-height: 30px;
     padding-top: 15px;
     @media (max-width: $desktop) {
-      @include text-style(300, 15, 25); 
+      @include text-style(300, 15, 25);
     }
   }
 
